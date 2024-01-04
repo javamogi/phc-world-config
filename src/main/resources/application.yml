@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: phc-world-config-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///C:\Users\user\Documents\phc-world-native-file-repo
+#        git:
+#          uri: https://github.com/javamogi/spring-cloud-config
+#          username: [username]
+#          passphrase: [password]
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
