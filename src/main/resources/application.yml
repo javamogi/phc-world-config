@@ -6,6 +6,11 @@ spring:
     name: phc-world-config-service
   profiles:
     active: native
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
@@ -20,5 +25,5 @@ management:
   endpoints:
     web:
       exposure:
-        include: health
+        include: health, busrefresh
 
